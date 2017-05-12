@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+	<h1>FIAP Park</h1>
+	<h:form>
+		<h:panelGrid>
+		<h:outputLabel value="Inicio" for="ini" />
+		<h:inputText id="ini" value="#{estacionamentoBean.inicio}"/><br></br>
+		<h:outputLabel value="Fim" for="fim" />
+		<h:inputText value="#{estacionamentoBean.fim}"/><br></br>
+		<h:commandButton action="#{estacionamentoBean.calcular()}" value="Calcular" /><br></br>
+		<h:outputLabel id="fim" value="#{estacionamentoBean.valorTotal}" />
+		</h:panelGrid>
+	</h:form>	
+	
+</body> 
+</html>
